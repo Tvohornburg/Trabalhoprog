@@ -168,12 +168,10 @@ if __name__ == "__main__":
     agua = Item.create(nome= "agua",descricao = "usada quando esta com sede", peso = 1, quantidade = 1)
     inventario1 = Inventario.create(peso_max = 200)
     inventario1.itens.add(agua)
-    inventario1.itens.add(comida)
-
+    
 
     inventario2 = Inventario.create(peso_max = 50)
-    pocao = Pocao.create(nome= "cura", efeito = "Cura", duracao = 1)
-    inventario2.itens.add(pocao)
+    inventario2.itens.add(comida)
 
     
     npc = Npc.create(nome = "João", reputacao = "Boa", inventario = inventario2, estado = "tranquilo")
@@ -196,3 +194,5 @@ if __name__ == "__main__":
     print (jogador)
     print()
     print (inimigo)
+    print()
+    print(inventario2)
